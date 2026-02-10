@@ -1,0 +1,68 @@
+!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Travel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Cabeçalho com logotipo e nome -->
+<div class="header">
+    <img src="img/logo.png" alt="Green Travel Logo" class="logo">
+    <h1>Green Travel</h1>
+</div>
+
+<div class="top-user">
+    <div class="avatar"></div>
+    <div>
+        <strong>Utilizador</strong><br>
+        Minha pontuação: 70
+    </div>
+</div>
+
+<div class="card">
+    <div>Meu rendimento</div>
+    <div class="saldo">€ <span id="saldo"></span></div>
+
+    <div class="buttons">
+        <button onclick="abrirRecarga()">Recarga (Admin)</button>
+        <button onclick="abrirRetirada()">Retirada</button>
+    </div>
+</div>
+
+<!-- MODAL RECARGA ADMIN -->
+<div class="modal" id="modalRecarga">
+    <div class="modal-content">
+        <h3>Recarga (Admin)</h3>
+        <input type="password" id="senhaAdmin" placeholder="Senha Admin">
+        <input type="number" id="valorRecarga" placeholder="Valor em €">
+        <button onclick="confirmarRecarga()">Confirmar</button>
+        <button onclick="fecharModais()">Cancelar</button>
+    </div>
+</div>
+
+<!-- MODAL RETIRADA -->
+<div class="modal" id="modalRetirada">
+    <div class="modal-content">
+        <h3>Retirada</h3>
+        <input type="text" id="iban" placeholder="IBAN Português (PT50...)">
+        <input type="number" id="valorRetirada" placeholder="Valor em €">
+        <button onclick="confirmarRetirada()">Confirmar</button>
+        <button onclick="fecharModais()">Cancelar</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+    const tel = localStorage.getItem("usuarioLogado");
+    if (!tel) {
+        window.location.href = "index.html";
+    } else {
+        const user = JSON.parse(localStorage.getItem("user_" + tel));
+        document.getElementById("saldo").innerText = parseFloat(user.saldo).toFixed(2);
+    }
+</script>
+
+</body>
+</html>

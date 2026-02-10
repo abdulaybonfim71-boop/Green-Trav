@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #b6e300;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.header .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* LOGIN / REGISTO */
+.login-bg {
+    background: #b6e300;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #7fb800;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box a {
+    color: #007700;
+    text-decoration: none;
+}
+
+/* DASHBOARD */
+.top-user {
+    background: #eaffb8;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-right: 10px;
+}
+
+.card {
+    background: #f6ffcc;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.saldo {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #7fb800;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* MODAIS */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #7fb800;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
